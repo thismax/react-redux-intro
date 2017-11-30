@@ -5,7 +5,7 @@ module.exports = {
   entry: './js/ClientApp.jsx',
   devtool: 'cheap-eval-source-map',
   output: {
-    path: path.join(__dirname, './public'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
   },
   resolve: {
