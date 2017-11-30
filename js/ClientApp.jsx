@@ -1,19 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-const MyTitle = props => (
-  <div>
-    <h1 style={{ color: props.color }}>{props.title}</h1>
+const App = () => (
+  <div className="app">
+    <div className="landing">
+      <h1>mvideo</h1>
+      <input type="text" placeholder="Search" />
+      <a>or Browse All</a>
+    </div>
   </div>
 );
 
-const MyComponent = () => (
-  <div id="my-component">
-    <MyTitle title="Game of Thrones" color="YellowGreen" />
-    <MyTitle title="Stranger Things" color="peru" />
-    <MyTitle title="House of Cards" color="GreenYellow" />
-    <MyTitle title="The Americans" color="burlywood" />
-  </div>
-);
-
-render(<MyComponent />, document.getElementById('app'));
+render(<App />, document.getElementById('app'));
