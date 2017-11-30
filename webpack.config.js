@@ -10,5 +10,18 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
+  },
+  stats: {
+    colors: true,
+    reasons: true,
+    chunks: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        loader: 'babel-loader'
+      }
+    ]
   }
 };
