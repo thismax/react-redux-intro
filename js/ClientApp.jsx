@@ -12,7 +12,7 @@ const MyComponent = () => (
     <MyTitle title="Game of Thrones" color="YellowGreen" />
     <MyTitle title="Stranger Things" color="peru" />
     <MyTitle title="House of Cards" color="GreenYellow" />
-    <MyTitle title="The Americans" color="cyan" />
+    <MyTitle title="The Americans" color="burlywood" />
   </div>
 );
 
