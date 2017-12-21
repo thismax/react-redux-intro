@@ -3,6 +3,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { setSearchTerm } from './actionCreators';
 
 const Landing = (props: { searchTerm: string }) => (
   <div className="landing">
@@ -16,4 +17,10 @@ const mapStateToProps = state => ({
   searchTerm: state.searchTerm
 });
 
-export default connect(mapStateToProps)(Landing);
+const mapDispatchToProps = (dispatch: Fuction) => ({
+  handleSearchTermChange(event) {
+    dispatch(setSearchTerm(event.target.value));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Landing);
