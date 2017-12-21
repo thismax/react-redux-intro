@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component, SyntheticEvent } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import type { RouterHistory } from 'react-router-dom';
@@ -34,7 +34,7 @@ const mapStateToProps = state => ({
   searchTerm: state.searchTerm
 });
 
-const mapDispatchToProps = (dispatch: Fuction) => ({
+const mapDispatchToProps = (dispatch: Function) => ({
   handleSearchTermChange(event) {
     dispatch(setSearchTerm(event.target.value));
   }
