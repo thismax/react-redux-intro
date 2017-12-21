@@ -1,6 +1,6 @@
 // @flow
 
-import React, from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import ShowCard from './ShowCard';
 import Header from './Header';
@@ -13,12 +13,7 @@ const Search = (props: {
     <Header showSearch />
     <div>
       {props.shows
-        .filter(
-          show =>
-            `${show.title} ${show.description}`
-              .toUpperCase()
-              .indexOf(props.searchTerm.toUpperCase()) >= 0
-        )
+        .filter(show => `${show.title} ${show.description}`.toUpperCase().indexOf(props.searchTerm.toUpperCase()) >= 0)
         .map(show => <ShowCard key={show.imdbID} {...show} />)}
     </div>
   </div>
