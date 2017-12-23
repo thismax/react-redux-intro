@@ -21,7 +21,7 @@ test('addAPIData', () => {
   expect(addAPIData(strangerThings)).toMatchSnapshot();
 });
 
-test('getAPIDetails', () => {
+test('getAPIDetails', (done: Function) => {
   const dispatchMock = jest.fn();
   moxios.withMock(() => {
     getAPIDetails(strangerThings.imdbID)(dispatchMock);
